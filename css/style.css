@@ -1,0 +1,269 @@
+*,
+*::after,
+*::before {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+:root {
+    --webColor: rgb(51, 51, 51);
+    --firstColor: #1E90FF;
+    --secondCOlor: #F5F5F5;
+    --colorHover: rgb(92, 91, 91);
+}
+
+html {
+    font-family: sans-serif;
+}
+
+a {
+    text-decoration-line: none;
+    color: var(--secondCOlor);
+    border-radius: 4%;
+}
+
+span {
+    color: var(--firstColor);
+}
+
+header {
+    background-color: var(--webColor);
+}
+
+nav {
+    max-width: 1100px;
+    height: 80px;
+    margin: 0px auto;
+    color: var(--secondCOlor);
+}
+
+nav::after {
+    content: '';
+    display: block;
+    width: 100%;
+    clear: both;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    padding-top: 30px;
+    float: left;
+}
+
+.navbar {
+    list-style: none;
+    font-size: 20px;
+    float: right;
+    transition: 0.7s;
+}
+
+.navbar>li {
+    padding: 28px;
+    float: left;
+}
+
+.navbar>li:hover {
+    background-color: var(--colorHover);
+}
+
+.navbar>li:hover>a {
+    color: var(--firstColor);
+}
+
+.navbar>li:nth-child(1) {
+    background-color: var(--colorHover);
+}
+
+a[href^="http"] {
+    color: var(--firstColor);
+}
+
+.game {
+    display: block;
+    width: 100%;
+    padding: 250px 0px;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.619), rgba(0, 0, 0, 0.618)), url('../images/our-gamers.jpg') no-repeat center center /cover;
+    text-align: center;
+    line-height: 4rem;
+}
+
+.game>h2 {
+    font-size: 3.5rem;
+    color: var(--secondCOlor);
+    text-transform: uppercase;
+}
+
+.game>p {
+    color: var(--secondCOlor);
+}
+
+.game>a {
+    padding: 20px;
+    background-color: var(--webColor);
+    color: var(--secondCOlor);
+}
+
+.game>a:hover {
+    color: var(--firstColor);
+}
+
+.game-second::after {
+    content: '';
+    display: block;
+    width: 100%;
+    clear: both;
+}
+
+.game-second>div:nth-child(1) {
+    float: left;
+    width: 50%;
+    height: 400px;
+    background: url("../images/ps4.png") no-repeat center center/cover;
+}
+
+.history {
+    float: left;
+    width: 50%;
+    height: 400px;
+    padding-top: 100px;
+    text-align: center;
+    background-color: var(--webColor);
+}
+
+.history>h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin: 50px 0px;
+    color: var(--secondCOlor);
+}
+
+.history>p {
+    color: var(--secondCOlor);
+}
+
+.history>a {
+    display: inline-block;
+    margin: 30px;
+    padding: 15px;
+    background-color: var(--secondCOlor);
+    color: var(--webColor);
+}
+
+.history>a:hover {
+    color: var(--firstColor);
+}
+
+.platforms {
+    display: block;
+    width: 100%;
+}
+
+.platforms::after {
+    content: '';
+    display: block;
+    width: 100%;
+    clear: both;
+}
+
+.pelatform-child {
+    display: block;
+    width: 33%;
+    height: 200px;
+    float: left;
+    text-align: center;
+    padding: 20px;
+}
+
+.pelatform-child-odd {
+    background-color: var(--secondCOlor);
+}
+
+.pelatform-child-even {
+    background-color: var(--firstColor);
+}
+
+.pelatform-child-odd>h3 {
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    color: var(--colorHover);
+    margin-bottom: 20px;
+}
+
+.pelatform-child-odd>p {
+    color: var(--colorHover);
+}
+
+.pelatform-child-even>h3 {
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    color: var(--secondCOlor);
+    margin-bottom: 20px;
+}
+
+.pelatform-child-even>p {
+    color: var(--secondCOlor);
+}
+
+footer {
+    display: block;
+    width: 100%;
+    padding: 80px;
+    text-align: center;
+    color: var(--secondCOlor);
+    background-color: var(--webColor);
+}
+
+#menu {
+    display: none;
+}
+
+.bx-menu {
+    display: none;
+    width: 15%;
+    float: right;
+    font-size: 3rem;
+    color: var(--secondCOlor);
+    padding-top: 10px;
+
+}
+
+
+@media (max-width:700px) {
+
+    .game-second>div:nth-child(1),
+    .history,
+    .pelatform-child {
+        width: 100%;
+        clear: both;
+    }
+
+    .game-second>a {
+        margin-bottom: 40px;
+    }
+
+    .navbar {
+        width: 100%;
+        transform: scale(0);
+        background-color: var(--webColor);
+
+    }
+
+    .navbar>li {
+        width: 100%
+    }
+
+    .bx-menu {
+        display: block;
+    }
+
+    #menu:checked~.navbar {
+        transform: scale(1);
+    }
+
+    h1 {
+        padding: 15px;
+    }
+
+}
